@@ -42,7 +42,7 @@ call plug#end()
 "很多中文字体没有等宽，使用system link可以解决这个问题
 "这里在注册表里inputMono关联其他中文字体，需重启
 "set guifont=PragmataPro:h12
-set guifont=Sarasa_term_SC_Medium:h10
+set guifont=Sarasa_term_SC_Regular:h14
 "set guifont=InputMonoCondensed:h12
 "中文字体设置,使用 system link忽略此项,字体必需是vim可以识别的中文字体
 "set guifontwide=黑体:h12
@@ -50,16 +50,16 @@ set guifont=Sarasa_term_SC_Medium:h10
 "主题设置
 "=================================================================
 "colorscheme darkblue
-"if has('termguicolors')
-"	set termguicolors
-"endif
+if has('termguicolors')
+	set termguicolors
+endif
 syntax on
 "set background=dark
 "My picked colorscheme: onedark challenger_deep nord 
 "use next line to override onedark theme color 
-"colorscheme nord
+colorscheme nord
 "colorscheme challenger_deep
-colorscheme onedark
+"colorscheme onedark
 
 "其他设置
 "==================================================================
