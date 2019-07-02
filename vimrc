@@ -50,16 +50,16 @@ set guifont=Sarasa_term_SC_Medium:h10
 "主题设置
 "=================================================================
 "colorscheme darkblue
-"if has('termguicolors')
-"	set termguicolors
-"endif
+if has('termguicolors')
+	set termguicolors
+endif
 syntax on
 "set background=dark
 "My picked colorscheme: onedark challenger_deep nord 
 "use next line to override onedark theme color 
 "colorscheme nord
 "colorscheme challenger_deep
-colorscheme onedark
+colorscheme nord
 
 "其他设置
 "==================================================================
