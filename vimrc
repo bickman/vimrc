@@ -42,7 +42,7 @@ call plug#end()
 "很多中文字体没有等宽，使用system link可以解决这个问题
 "这里在注册表里inputMono关联其他中文字体，需重启
 "set guifont=PragmataPro:h12
-set guifont=Sarasa_term_SC_Medium:h10
+set guifont=Sarasa_term_SC_Regular:h12
 "set guifont=InputMonoCondensed:h12
 "中文字体设置,使用 system link忽略此项,字体必需是vim可以识别的中文字体
 "set guifontwide=黑体:h12
@@ -57,9 +57,9 @@ syntax on
 "set background=dark
 "My picked colorscheme: onedark challenger_deep nord 
 "use next line to override onedark theme color 
-"colorscheme nord
-"colorscheme challenger_deep
 colorscheme nord
+"colorscheme challenger_deep
+"colorscheme onedark
 
 "其他设置
 "==================================================================
@@ -111,4 +111,7 @@ nnoremap <F2> :tabnew $MYVIMRC<CR>
 nnoremap <F3> :source $MYVIMRC<CR>
 "nnoremap <C-o> :browse tabnew<CR>
 " Open markdown files with Chrome.
+"win10 press <F5> to open chrome to view md file
 autocmd BufEnter *.md exe 'noremap <F5> :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>'
+"mac press <F5> to open chrome to view md file
+"autocmd BufEnter *.md exe 'noremap <F5> :! /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome %:p<CR>'
