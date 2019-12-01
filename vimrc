@@ -6,8 +6,8 @@ set encoding=utf-8
 "set fileencodings=usc-bom,utf-8,cp936,gb18030,big5
 "set fileencoding=utf-8
 "delete the origin menu which may couse problem,generate a new one
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
 "let $LANG = 'en'  "set message language
 "set langmenu=en_US "set menu's language of gvim. no spaces beside '='
 set langmenu=zh_CN
@@ -21,13 +21,13 @@ source $VIMRUNTIME/vimrc_example.vim
 call plug#begin('~/vimfiles/plugged')
 
 " Make sure you use single quotes
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 "nord主题
 Plug 'arcticicestudio/nord-vim'
 "challenger-deep主题
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+"Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
 "base16主题
@@ -42,7 +42,7 @@ call plug#end()
 "很多中文字体没有等宽，使用system link可以解决这个问题
 "这里在注册表里inputMono关联其他中文字体，需重启
 "set guifont=PragmataPro:h12
-set guifont=Sarasa_term_SC_Regular:h12
+set guifont=等距更纱黑体_SC:h11
 "set guifont=InputMonoCondensed:h12
 "中文字体设置,使用 system link忽略此项,字体必需是vim可以识别的中文字体
 "set guifontwide=黑体:h12
