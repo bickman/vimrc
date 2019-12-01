@@ -1,4 +1,4 @@
 # My vimrc file
 My vimrc use [vim-plug](https://github.com/junegunn/vim-plug) as plugin manager.  
 Use `git clone https://github.com/bickman/vimrc` to download vimrc.   
-Use `git submodule init` and `git submodule update` to sync **vim-plug** or use the link in the html file **vim-plug.html** to download `vim-plug` .
+Use the **vim-plug.html** in document `autoload` to download `vim-plug` .
