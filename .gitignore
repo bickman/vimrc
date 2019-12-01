@@ -2,5 +2,4 @@
 !vimrc
 !README.md
 !.gitignore
-!/autoload/vim_plug.html
-!autoload/
+!\autoload\vim_plug.html
