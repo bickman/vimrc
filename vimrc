@@ -38,6 +38,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 "base16主题
 "Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
 
@@ -51,6 +52,7 @@ call plug#end()
 "这里在注册表里inputMono关联其他中文字体，需重启
 "set guifont=PragmataPro:h12
 set guifont=Sarasa_Mono_SC:h12
+"set guifont=Sarasa/ Mono/ SC/ 12  " linux should be like this
 "set guifont=InputMonoCondensed:h12
 "中文字体设置,使用 system link忽略此项,字体必需是vim可以识别的中文字体
 "set guifontwide=黑体:h12
@@ -64,8 +66,8 @@ if has('termguicolors')
 	set termguicolors
 endif
 "syntax on
-"set background=dark
-colorscheme nord
+set background=dark
+colorscheme Nord
 "colorscheme challenger_deep
 "colorscheme onedark
 
@@ -73,14 +75,19 @@ colorscheme nord
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Airline Setting                                │
 "╰───────────────────────────────────────────────────────────────────────────────╯
-
 "https://github.com/vim-airline/vim-airline
-let g:airline#extensions#tabline#enabled = 1  "1:enable tabline 0:desable 
+"let g:airline_theme='onedark'
+"let g:airline#extensions#tabline#enabled = 0  "1:enable tabline 0:desable 
 let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
+"╭───────────────────────────────────────────────────────────────────────────────╮
+"│                                Netrw Setting                                  │
+"╰───────────────────────────────────────────────────────────────────────────────╯
+let g:netrw_liststyle = 3 " 0: thin 1: long 2: wide 3: tree
+"let g:netrw_browse_split = 4 " 1: Sex 2: Vex 3: tabnew 4: this
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Other Setting                                  │
