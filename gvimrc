@@ -61,9 +61,6 @@ set guifont=Sarasa_Mono_SC:h10.5
 "│                                Theme Setting                                  │
 "╰───────────────────────────────────────────────────────────────────────────────╯
 
-if has('termguicolors')
-	set termguicolors
-endif
 "syntax on
 set background=dark
 "colorscheme Nord
