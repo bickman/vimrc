@@ -137,9 +137,9 @@ filetype plugin on
 "╰───────────────────────────────────────────────────────────────────────────────╯
 
 "<F2>打开配置文件
-nnoremap <F2> :tabnew $MYVIMRC<CR>
+nnoremap <F2> :tabnew $MYGVIMRC<CR>
 "<F3>重新载入配置文件
-nnoremap <F3> :source $MYVIMRC<CR>
+nnoremap <F3> :source $MYGVIMRC<CR>
 "nnoremap <C-o> :browse tabnew<CR>
 " Open markdown files with Chrome.
 "win10 press <F5> to open chrome to view md file
