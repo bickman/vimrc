@@ -1,6 +1,2 @@
-*
-!vimrc
-!README.md
-!.gitignore
-!vim_plug.html
-!gvimrc
+/plugged
+/autoload/plug.vim
