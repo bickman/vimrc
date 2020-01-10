@@ -5,8 +5,8 @@
 "set nocompatible
 set encoding=utf-8
 "set termencoding=utf-8
-"set fileencodings=usc-bom,utf-8,cp936,gb18030,big5
-"set fileencoding=utf-8
+set fileencodings=usc-bom,utf-8,cp936,gb18030,big5
+set fileencoding=utf-8
 "delete the origin menu which may couse problem,generate a new one
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
@@ -16,7 +16,7 @@ set encoding=utf-8
 "set helplang=en
 winpos 300 50 "设置初始界面位置
 set lines=45 columns=100 "设置初始界面大小
-source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/vimrc_example.vim
 
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
@@ -36,26 +36,10 @@ Plug 'joshdick/onedark.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "base16主题
 "Plug 'chriskempson/base16-vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
-
-
-"╭───────────────────────────────────────────────────────────────────────────────╮
-"│                                Font Setting                                   │
-"╰───────────────────────────────────────────────────────────────────────────────╯
-
-"英文字体设置，中文字体需要等宽
-"很多中文字体没有等宽，使用system link可以解决这个问题
-"这里在注册表里inputMono关联其他中文字体，需重启
-"set guifont=PragmataPro:h12
-set guifont=Sarasa_Mono_SC:h10.5
-"set guifont=Sarasa/ Mono/ SC/ 12  " linux should be like this
-"set guifont=InputMonoCondensed:h12
-"中文字体设置,使用 system link忽略此项,字体必需是vim可以识别的中文字体
-"set guifontwide=黑体:h12
-
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Theme Setting                                  │
@@ -67,7 +51,7 @@ endif
 set background=dark
 "colorscheme Nord
 "colorscheme challenger_deep
-colorscheme nord
+colorscheme onedark
 
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
@@ -95,19 +79,12 @@ set lcs=tab:<->,eol:<,space:_,trail:^,extends:>,precedes:v
 "detect the fileformats,first dos ,than unix, last mac,if you want to change
 "the really fileformat ,use edit ++ff=dos,then write the file
 set fileformats=dos,unix
-"设置标签页显示内容
-set guitablabel=[%N]\ %t\ %M
 "设置statuline状态栏,laststatus=0 不显示状态栏 1 只有在两个窗口才显示状态栏 2 永远显示状态栏
 set laststatus=2
 "set statusline content,see :help statusline for help
 set statusline=%F%r%h[%{&ff}]%y\ %{&fileencoding}
 "鼠标选择模式，在normal或者insert模式下用鼠标拖拽选择，再点击，选择部分会被点击字母替换
 set selectmode+=mouse
-"set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-"set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-set guioptions+=b
 set nowrap
 "显示行数
 set nu
