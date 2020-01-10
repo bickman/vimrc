@@ -14,9 +14,8 @@ set fileencoding=utf-8
 "set langmenu=en_US "set menu's language of gvim. no spaces beside '='
 "set langmenu=zh_CN
 "set helplang=en
-winpos 300 50 "设置初始界面位置
 set lines=45 columns=100 "设置初始界面大小
-"source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/vimrc_example.vim
 
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
@@ -26,9 +25,9 @@ set lines=45 columns=100 "设置初始界面大小
 call plug#begin('~/vimfiles/plugged')
 
 " Make sure you use single quotes
-"Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 "nord主题
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
 "challenger-deep主题
 "Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
@@ -37,7 +36,7 @@ Plug 'joshdick/onedark.vim'
 "base16主题
 "Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
 
@@ -47,20 +46,18 @@ call plug#end()
 if has('termguicolors')
 	set termguicolors
 endif
-"syntax on
+syntax on
 set background=dark
 "colorscheme Nord
 "colorscheme challenger_deep
 colorscheme onedark
-
-
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Airline Setting                                │
 "╰───────────────────────────────────────────────────────────────────────────────╯
 "https://github.com/vim-airline/vim-airline
 "let g:airline_theme='onedark'
-let g:airline#extensions#tabline#enabled = 0  "1:enable tabline 0:desable 
-let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
+"let g:airline#extensions#tabline#enabled = 0  "1:enable tabline 0:desable 
+"let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
@@ -68,14 +65,15 @@ let g:airline_powerline_fonts = 1
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Netrw Setting                                  │
 "╰───────────────────────────────────────────────────────────────────────────────╯
-let g:netrw_liststyle = 3 " 0: thin 1: long 2: wide 3: tree
+"let g:netrw_liststyle = 3 " 0: thin 1: long 2: wide 3: tree
 "let g:netrw_browse_split = 4 " 1: Sex 2: Vex 3: tabnew 4: this
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Other Setting                                  │
 "╰───────────────────────────────────────────────────────────────────────────────╯
+"set tabline= %t
 "set listchars,use ':set list' to show invisible chars
-set lcs=tab:<->,eol:<,space:_,trail:^,extends:>,precedes:v
+"set lcs=tab:<->,eol:<,space:_,trail:^,extends:>,precedes:v
 "detect the fileformats,first dos ,than unix, last mac,if you want to change
 "the really fileformat ,use edit ++ff=dos,then write the file
 set fileformats=dos,unix
@@ -105,9 +103,6 @@ set nobackup
 set noundofile
 set noswapfile
 filetype plugin on
-"设置set list特殊字符的显示
-"取消instant_markdown自动启动，使用:InstantMarkdownPreview来启动预览
-
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Shotkey Setting                                │
