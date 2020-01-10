@@ -47,7 +47,7 @@ if has('termguicolors')
 	set termguicolors
 endif
 syntax on
-set background=dark
+"set background=dark
 "colorscheme Nord
 "colorscheme challenger_deep
 colorscheme onedark
@@ -56,8 +56,8 @@ colorscheme onedark
 "╰───────────────────────────────────────────────────────────────────────────────╯
 "https://github.com/vim-airline/vim-airline
 "let g:airline_theme='onedark'
-"let g:airline#extensions#tabline#enabled = 0  "1:enable tabline 0:desable 
-"let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
+let g:airline#extensions#tabline#enabled = 1  "1:enable tabline 0:desable 
+let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
@@ -78,9 +78,9 @@ let g:airline_powerline_fonts = 1
 "the really fileformat ,use edit ++ff=dos,then write the file
 set fileformats=dos,unix
 "设置statuline状态栏,laststatus=0 不显示状态栏 1 只有在两个窗口才显示状态栏 2 永远显示状态栏
-set laststatus=2
+"set laststatus=2
 "set statusline content,see :help statusline for help
-set statusline=%F%r%h[%{&ff}]%y\ %{&fileencoding}
+"set statusline=%F%r%h[%{&ff}]%y\ %{&fileencoding}
 "鼠标选择模式，在normal或者insert模式下用鼠标拖拽选择，再点击，选择部分会被点击字母替换
 set selectmode+=mouse
 set nowrap

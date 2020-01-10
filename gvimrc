@@ -14,5 +14,5 @@ set selectmode+=mouse
 set guioptions-=T  "remove toolbar
 set guioptions-=L  "remove left-hand scroll bar
 set guioptions+=b
-"set guioptions-=m  "remove menu bar
+set guioptions-=m  "remove menu bar
 "set guioptions-=r  "remove right-hand scroll bar
