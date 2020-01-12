@@ -3,10 +3,10 @@
 "╰───────────────────────────────────────────────────────────────────────────────╯
 
 "set nocompatible
-set encoding=utf-8
+set encoding=UTF-8
 "set termencoding=utf-8
 set fileencodings=usc-bom,utf-8,cp936,gb18030,big5
-set fileencoding=utf-8
+set fileencoding=UTF-8
 "delete the origin menu which may couse problem,generate a new one
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
@@ -35,7 +35,7 @@ Plug 'joshdick/onedark.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "base16主题
 "Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
@@ -56,11 +56,11 @@ colorscheme onedark
 "╰───────────────────────────────────────────────────────────────────────────────╯
 "https://github.com/vim-airline/vim-airline
 "let g:airline_theme='onedark'
-let g:airline#extensions#tabline#enabled = 1  "1:enable tabline 0:desable 
-let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
+"let g:airline#extensions#tabline#enabled = 1  "1:enable tabline 0:desable 
+"let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Netrw Setting                                  │
@@ -71,16 +71,17 @@ let g:airline_powerline_fonts = 1
 "╭───────────────────────────────────────────────────────────────────────────────╮
 "│                                Other Setting                                  │
 "╰───────────────────────────────────────────────────────────────────────────────╯
-"set tabline= %t
+"set tabline=%t
 "set listchars,use ':set list' to show invisible chars
 "set lcs=tab:<->,eol:<,space:_,trail:^,extends:>,precedes:v
 "detect the fileformats,first dos ,than unix, last mac,if you want to change
 "the really fileformat ,use edit ++ff=dos,then write the file
 set fileformats=dos,unix
 "设置statuline状态栏,laststatus=0 不显示状态栏 1 只有在两个窗口才显示状态栏 2 永远显示状态栏
-"set laststatus=2
+set laststatus=2
 "set statusline content,see :help statusline for help
-"set statusline=%F%r%h[%{&ff}]%y\ %{&fileencoding}
+set statusline=%m%F%r%h[%{&ff}]%y[%{&fileencoding}]%=[%l:%c][%p%%][%L]
+
 "鼠标选择模式，在normal或者insert模式下用鼠标拖拽选择，再点击，选择部分会被点击字母替换
 set selectmode+=mouse
 set nowrap
