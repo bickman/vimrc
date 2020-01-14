@@ -88,6 +88,13 @@ set fileformats=dos,unix
 set laststatus=2
 "set statusline content,see :help statusline for help
 "set statusline=%m%F%r%h[%{&ff}]%y[%{&fileencoding}]%{fugitive#statusline()}%=%-10.(%l,%c%)%P
+function! ShowFileType()
+	if &filetype!=''
+		return &filetype
+	else
+		return 'ヾ(´ε`ヾ)'
+endfunction
+
 function! ReadOnly()
   if &readonly || !&modifiable
     return ' '
@@ -101,10 +108,10 @@ function! GitInfo()
 		if GitInfo!= ''
 			return ' '.FugitiveHead()
 		else
-			return '[x]Git'
+			return '(　ﾟ 3ﾟ)'
 		endif
 	else
-		return '[x]Fugitive'
+		return '(●^_^●)'
 	endif
 endfunction
 
@@ -113,7 +120,7 @@ set statusline+=%<
 set statusline+=%1*\ %F%{ReadOnly()}\ %*
 set statusline+=%2*\ %{&ff}\ %*
 set statusline+=%3*\ %{&fenc}\ %*
-set statusline+=%4*\ %Y\ %*
+set statusline+=%4*\ %{ShowFileType()}\ %*
 set statusline+=%5*\ %{GitInfo()}\ %*
 set statusline+=%8*%=%b,0x%B\ %*
 set statusline+=%6*\ %l,%c\ %*
