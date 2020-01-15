@@ -10,4 +10,4 @@ Use `git clone https://github.com/bickman/vimrc` to download to ~/vimfiles/.
 Run the PowerShell Script "DownPlugVim.ps1" or [here](https://github.com/junegunn/vim-plug) to download **Plug.vim** file and put it in **autoload** directory, start **gvim** and run `:PlugInstall`
 
 ### How it looks?
-[vimImage](image/vimImage02.png)
+[vimImage](image/vimImage02.jpg)
