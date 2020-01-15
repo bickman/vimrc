@@ -1,8 +1,3 @@
-"==================================================================
-"                              Source
-"==================================================================
-source $VIMRUNTIME/vimrc_example.vim
-"source $HOME/vimfiles/statusline.vim
 set nocompatible
 set encoding=UTF-8
 "set termencoding=utf-8
@@ -17,15 +12,7 @@ set fileencoding=UTF-8
 "set helplang=en
 set lines=45 columns=100
 winpos 300 50
-"set guifont=Sarasa/ Mono/ SC/ 12  " linux should be like this
-set guifont=Sarasa_Mono_SC_Semibold:h10.5
-set guitablabel=[%N]\ %t\ %M
-set selectmode+=mouse
-set guioptions-=T  "remove toolbar
-set guioptions-=L  "remove left-hand scroll bar
-set guioptions+=b
-"set guioptions-=m  "remove menu bar
-"set guioptions-=r  "remove right-hand scroll bar
+source $VIMRUNTIME/vimrc_example.vim
 
 "====================================================================
 "                              Vim-plug
@@ -35,7 +22,7 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'yianwillis/vimcdoc'
 " Make sure you use single quotes
 Plug 'tpope/vim-fugitive'
-"Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 "Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
@@ -60,7 +47,7 @@ colorscheme onedark
 "let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 "let g:netrw_liststyle = 3 " 0: thin 1: long 2: wide 3: tree
 "let g:netrw_browse_split = 4 " 1: Sex 2: Vex 3: tabnew 4: this
@@ -75,53 +62,6 @@ set fileformats=dos,unix
 set laststatus=2
 "set statusline content,see :help statusline for help
 "set statusline=%m%F%r%h[%{&ff}]%y[%{&fileencoding}]%{fugitive#statusline()}%=%-10.(%l,%c%)%P
-function! ShowFileType()
-	if &filetype!=''
-		return &filetype
-	else
-		return 'ヾ(´ε`ヾ)'
-endfunction
-
-function! ReadOnly()
-  if &readonly || !&modifiable
-    return ' '
-  else
-    return ''
-endfunction
-
-function! GitInfo()
-	if exists('g:loaded_fugitive')
-		let GitInfo = FugitiveHead()
-		if GitInfo!= ''
-			return ' '.FugitiveHead()
-		else
-			return '(　ﾟ 3ﾟ)'
-		endif
-	else
-		return '(●^_^●)'
-	endif
-endfunction
-
-set statusline=
-set statusline+=%<
-set statusline+=%1*\ %F%{ReadOnly()}\ %*
-set statusline+=%2*\ %{&ff}\ %*
-set statusline+=%3*\ %{&fenc}\ %*
-set statusline+=%4*\ %{ShowFileType()}\ %*
-set statusline+=%5*\ %{GitInfo()}\ %*
-set statusline+=%8*%=%b,0x%B\ %*
-set statusline+=%6*\ %l,%c\ %*
-set statusline+=%7*\ %p%%\ %*
-
-hi User9 guifg=#282C34 guibg=#B1A1C1
-hi User8 guifg=#282C34 guibg=#81A1C1
-hi User1 guifg=#282C34 guibg=#BF616A
-hi User2 guifg=#282C34 guibg=#D08770
-hi User3 guifg=#282c34 guibg=#EBCB8B
-hi User4 guifg=#282c34 guibg=#A3BE8C
-hi User5 guifg=#282c34 guibg=#8FBCBB
-hi User6 guifg=#282c34 guibg=#5E81AC
-hi User7 guifg=#282c34 guibg=#B48EAD
 
 set selectmode+=mouse
 set nowrap
@@ -138,6 +78,17 @@ set noundofile
 set noswapfile
 filetype plugin on
 cd ~\desktop
+source $HOME/vimfiles/statusline.vim
+
+"set guifont=Sarasa/ Mono/ SC/ 12  " linux should be like this
+set guifont=Sarasa_Mono_SC_Semibold:h10.5
+set guitablabel=[%N]\ %t\ %M
+set selectmode+=mouse
+set guioptions-=T  "remove toolbar
+set guioptions-=L  "remove left-hand scroll bar
+set guioptions+=b
+"set guioptions-=m  "remove menu bar
+"set guioptions-=r  "remove right-hand scroll bar
 
 nnoremap <F2> :tabnew $MYVIMRC<CR>
 nnoremap <F3> :source $MYVIMRC<CR>
