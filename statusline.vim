@@ -48,7 +48,7 @@ let g:currentmode={
 	\}
 
 set statusline=
-set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%1*\ %{toupper(g:currentmode[mode()])}%*
 set statusline+=%2*\ %F%{ReadOnly()}\ %*
 set statusline+=%3*\ %{ShowFileType()}\ %*
 set statusline+=%4*\ %{GitInfo()}\ %*
@@ -59,8 +59,8 @@ set statusline+=%8*\ %3l,%-3c\ %*
 set statusline+=%9*\ %3p%%\ %*
 set statusline+=%<
 
-hi Statusline guifg=#ffffff guibg=#BF616A
-hi StatuslineNC guifg=#282c34 guibg=#BF616A
+hi Statusline guifg=#ffffff guibg=#282c34
+hi StatuslineNC guifg=#282c34 guibg=#282c34
 
 hi User1 guifg=#ffffff guibg=#BF616A
 hi User2 guifg=#ffffff guibg=#D08770
