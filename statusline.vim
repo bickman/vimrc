@@ -1,8 +1,22 @@
+function! GetFileName()
+	let FileName=@%
+	if FileName!=''
+		return FileName
+	else
+		return 'NoFile'
+	endif
+endfunction
+
+function! GetDir()
+	let DirName=getcwd()
+	return DirName
+endfunction
+
 function! ShowFileType()
 	if &filetype!=''
 		return &filetype
 	else
-		return '(→_→)'
+		return 'NoType'
 endfunction
 
 function! ReadOnly()
@@ -12,16 +26,29 @@ function! ReadOnly()
     return ''
 endfunction
 
+
 function! GitInfo()
 	if exists('g:loaded_fugitive')
 		let GitInfo = FugitiveHead()
 		if GitInfo!= ''
 			return ' '.FugitiveHead()
 		else
-			return '(~￣▽￣)~'
+			return 'NoGit'
 		endif
 	else
-		return 'o(><；)oo'
+		return 'NoFugitive'
+	endif
+endfunction
+
+let g:currentWin=winnr()
+autocmd WinEnter * let g:currentWin=winnr()
+
+function! Active()
+	let l:winnu=winnr()
+	if l:winnu==g:currentWin
+		return '(●^_^●'
+	else
+		return '( ╥_╥'
 	endif
 endfunction
 
@@ -46,14 +73,13 @@ let g:currentmode={
 	\ '!'      : 'Shell ',
 	\ 't'      : 'Terminal '
 	\}
-
 set statusline=
 set statusline+=%1*\ %{toupper(g:currentmode[mode()])}%*
-set statusline+=%<
-set statusline+=%2*\ %F%{ReadOnly()}\ %*
+"set statusline+=%2*%<\ %{GetDir()}\ %*
+set statusline+=%2*\ %{GetFileName()}%{ReadOnly()}\ %*
 set statusline+=%3*\ %{ShowFileType()}\ %*
-set statusline+=%4*\ %{GitInfo()}\ %*
-set statusline+=%5*\ (●^_^●%=)\ %*
+set statusline+=%4*\ %{Active()}%=)\ %*
+set statusline+=%5*\ %{GitInfo()}\ %*
 set statusline+=%6*\ %{&ff}\ %*
 set statusline+=%7*\ %{&fenc}\ %*
 set statusline+=%8*\ %3l,%-3c\ %*

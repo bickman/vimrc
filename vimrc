@@ -1,9 +1,7 @@
-set nocompatible
 set encoding=UTF-8
 "set termencoding=utf-8
 set fileencodings=usc-bom,utf-8,cp936,gb18030,big5
 set fileencoding=UTF-8
-"delete the origin menu which may couse problem,generate a new one
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
 "let $LANG = 'en'  "set message language
@@ -14,34 +12,33 @@ set lines=45 columns=100
 winpos 300 50
 source $VIMRUNTIME/vimrc_example.vim
 
-"====================================================================
-"                              Vim-plug
-"====================================================================
+"========================================================================================
+"                                        Vim-plug
+"========================================================================================
 
 call plug#begin('~/vimfiles/plugged')
 Plug 'yianwillis/vimcdoc'
-" Make sure you use single quotes
 Plug 'tpope/vim-fugitive'
 Plug 'arcticicestudio/nord-vim'
 "Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
-"Plug 'chriskempson/base16-vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-" Initialize plugin system
-"Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+"==========================================================================================
+"                                        Colortheme Setting
+"==========================================================================================
 if has('termguicolors')
 	set termguicolors
 endif
-syntax on
-"set background=dark
 "colorscheme Nord
 "colorscheme challenger_deep
 colorscheme onedark
-"https://github.com/vim-airline/vim-airline
+"===========================================================================================
+"                                        Airline Setting
+"===========================================================================================
 "let g:airline_theme='onedark'
 "let g:airline#extensions#tabline#enabled = 1  "1:enable tabline 0:desable
 "let g:airline#extensions#tabline#formatter = 'unique_tail' "tabline format
@@ -49,11 +46,10 @@ colorscheme onedark
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 "let g:airline_powerline_fonts = 1
 
+
 "let g:netrw_liststyle = 3 " 0: thin 1: long 2: wide 3: tree
 "let g:netrw_browse_split = 4 " 1: Sex 2: Vex 3: tabnew 4: this
 
-"set tabline=%t
-"set listchars,use ':set list' to show invisible chars
 set lcs=tab:<->,eol:⇣,space:·,trail:^,extends:⇌,precedes:⇇
 set list
 "detect the fileformats,first dos ,than unix, last mac,if you want to change
@@ -76,21 +72,27 @@ set nowrap
 set nobackup
 set noundofile
 set noswapfile
-filetype plugin on
-cd ~\desktop
+"==========================================================================================
+"                                        Statusline Setting
+"==========================================================================================
 source $HOME/vimfiles/statusline.vim
-
+cd $HOME
+"==========================================================================================
+"                                        GUI Setting
+"==========================================================================================
 "set guifont=Sarasa/ Mono/ SC/ 12  " linux should be like this
 set guifont=Sarasa_Mono_SC_Semibold:h10.5
+
 set guitablabel=[%N]\ %t\ %M
-set selectmode+=mouse
 set guioptions-=T  "remove toolbar
 set guioptions-=L  "remove left-hand scroll bar
 set guioptions+=b
 "set guioptions-=m  "remove menu bar
 "set guioptions-=r  "remove right-hand scroll bar
-
-nnoremap <F2> :tabnew $MYVIMRC<CR>
+"==========================================================================================
+"                                        Shotkey Setting
+"==========================================================================================
+nnoremap <F2> :edit! $MYVIMRC<CR>
 nnoremap <F3> :source $MYVIMRC<CR>
 "nnoremap <C-o> :browse tabnew<CR>
 "Open markdown files with Chrome.
