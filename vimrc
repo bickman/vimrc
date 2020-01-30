@@ -19,7 +19,7 @@ source $VIMRUNTIME/vimrc_example.vim
 call plug#begin('~/vimfiles/plugged')
 Plug 'yianwillis/vimcdoc'
 Plug 'tpope/vim-fugitive'
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
 "Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'joshdick/onedark.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
@@ -97,6 +97,6 @@ nnoremap <F3> :source $MYVIMRC<CR>
 "nnoremap <C-o> :browse tabnew<CR>
 "Open markdown files with Chrome.
 "win10 press <F5> to open chrome to view md file
-autocmd BufEnter *.md exe 'noremap <F5> :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>'
+autocmd BufEnter *.md,*.html exe 'noremap <F5> :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>'
 "mac press <F5> to open chrome to view md file
 "autocmd BufEnter *.md exe 'noremap <F5> :! /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome %:p<CR>'
