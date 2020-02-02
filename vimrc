@@ -86,9 +86,9 @@ set guifont=Sarasa_Mono_SC_Semibold:h10.5
 set guitablabel=[%N]\ %t\ %M
 set guioptions-=T  "remove toolbar
 set guioptions-=L  "remove left-hand scroll bar
-set guioptions+=b
-"set guioptions-=m  "remove menu bar
-"set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=b  "remove bottom scroll bar
+set guioptions-=m  "remove menu bar
+set guioptions-=r  "remove right-hand scroll bar
 "==========================================================================================
 "                                        Shotkey Setting
 "==========================================================================================
